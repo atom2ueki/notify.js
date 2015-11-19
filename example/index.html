@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example Notify.js</title>
+  </head>
+  <body>
+    <h1>Example for Notify.js</h1>
+    <!-- <script src="https://cdn.rawgit.com/lodash/lodash/3.10.1/lodash.min.js"></script> -->
+    <script src="../js/notify.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var abc = new notification();
+      var options = {
+        title: "customized title",
+        dir: "rtl",
+        body: "customized notification",
+        timeout: 1000,
+        icon: 'images/bell-icon.png',
+      };
+      // var notify = new notify(options);
+      var notify = new notify();
+      /* the order need use callback */
+      var test = notify.show('onclick', function(){
+        alert("Trigger Something after click the notification");
+      });
+    </script>
+  </body>
+</html>
