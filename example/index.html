@@ -19,10 +19,9 @@
       // var notify = new notify(options);
       var notify = new notify();
       /* the order need use callback */
-      // notify.show('onclick', function(){
-      //   alert("Trigger Something after click the notification");
-      // });
-      notify.show();
+      notify.show('onclick', function(){
+        alert("Trigger Something after click the notification");
+      });
     </script>
   </body>
 </html>
