@@ -9,7 +9,6 @@
     <!-- <script src="https://cdn.rawgit.com/lodash/lodash/3.10.1/lodash.min.js"></script> -->
     <script src="../js/notify.js" charset="utf-8"></script>
     <script type="text/javascript">
-      var abc = new notification();
       var options = {
         title: "customized title",
         dir: "rtl",
@@ -20,9 +19,10 @@
       // var notify = new notify(options);
       var notify = new notify();
       /* the order need use callback */
-      var test = notify.show('onclick', function(){
-        alert("Trigger Something after click the notification");
-      });
+      // notify.show('onclick', function(){
+      //   alert("Trigger Something after click the notification");
+      // });
+      notify.show();
     </script>
   </body>
 </html>
