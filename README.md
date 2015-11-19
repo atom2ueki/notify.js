@@ -1,6 +1,7 @@
 # notify.js
 a modern browser notification alert library
-<br>![Demo]('http://atom2ueki.github.io/notify.js')
+
+- [Demo](http://atom2ueki.github.io/notify.js)
 
 ## Install
 ```js
