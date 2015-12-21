@@ -1,6 +1,6 @@
 # notify.js
-> a modern browser notification alert library
-------
+#### a modern browser notification alert library
+---
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://github.com/atom2ueki/notify.js/blob/master/LICENSE)
 
 - [Demo](http://atom2ueki.github.io/notify.js)
