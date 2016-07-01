@@ -25,7 +25,7 @@
 <p>a modern browser notification alert library</p>
 
 <ul>
-<li><a href="http://atom2ueki.github.io/notify.js">Demo</a></li>
+<li><a id='demo'>Demo - Click to view the example notification</a></li>
 </ul>
 
 <h3>
@@ -76,7 +76,20 @@
       </footer>
 
     </section>
+<script src='javascripts/notify.js' charset="utf-8"></script>
+<script>
+    var options = {
+        title: "Example Notification",
+        dir: "rtl",
+        body: "This is an example notification",
+        timeout: 1000,
+        icon: 'images/bell-icon.png'
+    }
+    var notify = new notify(options);
+    document.getElementById("demo").addEventListener('click', function(){
+        notify.show();
+    });
+</script>
 
-  
   </body>
 </html>
