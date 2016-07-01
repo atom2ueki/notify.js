@@ -84,10 +84,12 @@
         body: "This is an example notification",
         timeout: 1000,
         icon: 'images/bell-icon.png'
-    }
+    };
     var notify = new notify(options);
     document.getElementById("demo").addEventListener('click', function(){
-        notify.show();
+        notify.show('onclick', function(){
+          alert("The callback on notification clicking was just executed!");
+        });
     });
 </script>
 
