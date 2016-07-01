@@ -34,6 +34,9 @@
     else if (Notification.permission === 'granted') {
       this.notification = new Notification(this.options.title,
         {body:this.options.body,icon:this.options.icon,dir:this.options.dir});
+      if(this.options.timeout){
+        setTimeout(this.notification.close.bind(this.notification), this.options.timeout);
+      }
     }
     else if (Notification.permission !== 'denied') {
       Notification.requestPermission(function (permission) {
@@ -41,6 +44,9 @@
         if (permission === 'granted') {
           this.notification = new Notification(this.options.title,
             {body:this.options.body,icon:this.options.icon,dir:this.options.dir});
+          if(this.options.timeout){
+            setTimeout(this.notification.close.bind(this.notification), this.options.timeout);
+          }
         }
       });
     }
