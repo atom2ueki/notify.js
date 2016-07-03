@@ -4,7 +4,7 @@
   // Define our constructor
   window.notify = function() {
     // Create global element here
-
+    
     // Define option defaults
     var defaults = {
       title: 'default title',
@@ -34,7 +34,7 @@
     else if (Notification.permission === 'granted') {
       this.notification = new Notification(this.options.title,
         {body:this.options.body,icon:this.options.icon,dir:this.options.dir});
-      if(this.options.timeout){
+      if(this.options.timeout && typeof this.options.timeout === "number"){
         setTimeout(this.notification.close.bind(this.notification), this.options.timeout);
       }
     }
@@ -44,7 +44,7 @@
         if (permission === 'granted') {
           this.notification = new Notification(this.options.title,
             {body:this.options.body,icon:this.options.icon,dir:this.options.dir});
-          if(this.options.timeout){
+          if(this.options.timeout && typeof this.options.timeout === "number"){
             setTimeout(this.notification.close.bind(this.notification), this.options.timeout);
           }
         }
